@@ -8,5 +8,7 @@ public class Main {
         ss.searchbyid(2);
         ss.deletestudent(1);
         ss.display();
+        ss.updateStudent(3, "Virat", "ECE");
+        ss.display();
     }
 }
