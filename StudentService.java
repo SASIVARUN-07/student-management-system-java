@@ -16,7 +16,7 @@ public class StudentService {
     }
     void updateStudent(int id, String newName, String newBranch) {
         for (Student s : list) {
-            if (s.id == id) {
+            if (s.id == id && newName != null ) {
                 s.name = newName;
                 s.branch = newBranch;
                 System.out.println("Student with ID " + id + " updated.");
@@ -24,6 +24,15 @@ public class StudentService {
             }
         }
         System.out.println("Student with ID " + id + " not found.");
+    }
+    void duplicateidcheck(int id) {
+        for (Student s : list) {
+            if (s.id == id) {
+                System.out.println("Duplicate ID found: " + id);
+                return;
+            }
+        }
+        System.out.println("No duplicate ID found for: " + id);
     }
     void deletestudent(int id) {
         Iterator<Student> it = list.iterator();
