@@ -10,5 +10,6 @@ public class Main {
         ss.display();
         ss.updateStudent(3, "Virat", "ECE");
         ss.display();
+        ss.duplicateidcheck(1);
     }
 }
