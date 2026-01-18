@@ -47,6 +47,7 @@ public class StudentService {
         System.out.println("Student with ID " + id + " not found.");
     }
     void display() {
+        Collections.sort(list, (s1, s2) -> Integer.compare(s1.id, s2.id));
         for (Student s : list)
             System.out.println(s);
     }
