@@ -11,5 +11,13 @@ public class Main {
         ss.updateStudent(3, "Virat", "ECE");
         ss.display();
         ss.duplicateidcheck(1);
+        ss.display();
+        try {
+    Student s = ss.searchById(2);
+    System.out.println(s);
+} catch (Exception e) {
+    System.out.println(e.getMessage());
+}
+
     }
 }
