@@ -51,4 +51,12 @@ public class StudentService {
         for (Student s : list)
             System.out.println(s);
     }
+    public Student searchById(int id) {
+    for (Student s : list) {
+        if (s.id == id) {
+            return s;
+        }
+    }
+    throw new IllegalArgumentException("Student ID not found");
+}
 }
